@@ -23,32 +23,40 @@ https://phoenixnap.com/kb/how-to-install-terraform
 **Open Terraform:**
 Open a terminal or command prompt.
 Verify the installation by running:
+
 => terraform --version
 
 **Install Azure CLI & HashiCorp Terraform extensions:**
+
 Install Azure CLI
+
 => az extension add --name terraform
 
 # Modify terraform.tfvars file
-**Change the Azure Subscription ID from the below line in terraform.tfvars file**
+Change the **Azure Subscription ID** from the below line in terraform.tfvars file
 
 app_service_plan_id        = "/subscriptions/fd7a0e48-ef92-4ae6-b1a7-6a62c6dd318d/resourceGroups/amran-rg-web-sql-db-demo-project/providers/Microsoft.Web/serverFarms/amran-appserviceplan-web-21"
 
 **Connect to your Azure Subscription:**
 Run the following command to log in to your Azure account:
+
 => az version
+
 => az login
 
 **Terraform Deployment Steps**
 Navigate to the directory containing your Terraform configuration files.
 
 **Run the below command to initialize the Terraform deployment. This command downloads the Azure provider required to manage your Azure resources.**
+
 => terraform init -upgrade
 
 **Run the below command to create an execution plan.**
+
 => terraform plan -out main.tfplan
 
 **Run the below command to apply the execution plan to your cloud infrastructure.**
+
 => terraform apply main.tfplan
 
 Confirm the changes by typing "yes" when prompted.
