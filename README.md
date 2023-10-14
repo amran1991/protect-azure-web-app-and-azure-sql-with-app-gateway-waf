@@ -37,6 +37,10 @@ Change the **Azure Subscription ID** from the below line in terraform.tfvars fil
 
 app_service_plan_id        = "/subscriptions/fd7a0e48-ef92-4ae6-b1a7-6a62c6dd318d/resourceGroups/amran-rg-web-sql-db-demo-project/providers/Microsoft.Web/serverFarms/amran-appserviceplan-web-21"
 
+# Required Permission of Azure User Account to implement the infrastructure in Azure Portal. Assign the permission before running terraform commands.
+
+Subscription level => Access Control (IAM) =>  Owner or Contributor
+
 **Connect to your Azure Subscription:**
 Run the following command to log in to your Azure account:
 
